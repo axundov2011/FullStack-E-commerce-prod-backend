@@ -14,18 +14,18 @@ const ProductSchema = mongoose.Schema({
     name: {type: String, required: true},
     img: [{type: String, required: true}], // Burada array icerisine almagima sebeb, tipi "string" olan array gele biler
     reviews: [ReviewSchema],
-    description: {type: String, required: true},
     colors: [{type: String, required: true}], // Yani rengi girmek zorunlu olacaq
     size: [{type: String, required: true}], // Buda zorunlu olacaq
     price: {
         current: {type:Number, required: true},
-        discount: {type: Number},
+        current: {type: Number},
     },
     category: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Category",
         required: true,
     },
+    description: {type: String, required: true},
 },
  {timestamps: true}// sececeyimiz urunun tarihini yazdiriyoruz
 
