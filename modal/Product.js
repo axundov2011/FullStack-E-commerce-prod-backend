@@ -18,7 +18,7 @@ const ProductSchema = mongoose.Schema({
     size: [{type: String, required: true}], // Buda zorunlu olacaq
     price: {
         current: {type:Number, required: true},
-        current: {type: Number},
+        discount: {type: Number},
     },
     category: {
         type: mongoose.Schema.Types.ObjectId,
@@ -31,6 +31,6 @@ const ProductSchema = mongoose.Schema({
 
 );
 
-const Category = mongoose.model("product", ProductSchema);
+const Product = mongoose.model("Product", ProductSchema);
 
-module.exports = Category;
+module.exports = Product;

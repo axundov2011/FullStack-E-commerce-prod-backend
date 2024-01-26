@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
         // const product = req.body; // daha qisa yolu asagida new Producta vermek olar
         const newProduct = new Product(req.body);
         await newProduct.save();
-
+       
         res.status(201).json(newProduct);
 
     } catch (error) {
@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
     }
 })
 
-//Tum kategorileri getirme (Read - All)
+//Tum Productları getirme (Read - All)
 router.get("/", async (req, res) => {
     try {
         const products = await Product.find() //Bu mongoosen ozelliyidir. Ne var Product de hamisin getirir
