@@ -5,7 +5,9 @@ const ReviewSchema = mongoose.Schema({
     text:{type: String, required: true},
     rating: {type: Number, required: true},
     user: {type: mongoose.Schema.Types.ObjectId, ref: "User", required: true} //Object tabanli iliskili veri tabanidir bu. Yani useri iliskilendirdik. Kullanici useri bele iliskilendirecek
-})
+},
+{timestamps: true}
+)
 //Mongo uzerinden Schema ozelligini aldik
 // Dedik ki benim kategorimin bir type name ve img var,
 //
@@ -26,6 +28,7 @@ const ProductSchema = mongoose.Schema({
         required: true,
     },
     description: {type: String, required: true},
+
 },
  {timestamps: true}// sececeyimiz urunun tarihini yazdiriyoruz
 
