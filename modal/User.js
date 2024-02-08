@@ -11,7 +11,7 @@ const UserSchema = mongoose.Schema(
     password: {type: String, required: true},
     //istifadecinin rollari
     //default: user - yani ilk olusduruldugu anda her istifadeci user durumunda olacaq
-    role: {type: String, default: "admin", enum: ["user", "admin",]},
+    role: {type: String, default: "user", enum: ["user", "admin",]},
     avatar: {type:String},
 },
  {timestamps: true}// sececeyimiz urunun tarihini yazdiriyoruz
